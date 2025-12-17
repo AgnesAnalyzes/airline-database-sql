@@ -1,35 +1,54 @@
-# Airline Database Schema (SQL)
+# Airline Database – SQL Data Modeling & Analysis
 
-This project models an airline booking system using a relational database schema.  
-It was created from a training assignment and focuses on **data modeling**, **primary/foreign keys**, and **clean relational structure** as a foundation for analytical SQL queries.
+This project demonstrates the design and analysis of a relational airline booking database using **pure SQL**.  
+It was developed as part of a data analytics training program and transformed into a portfolio-ready project with a strong focus on **data modeling, relational integrity, and analytical querying**.
 
----
-
-## Entities & Relationships
-
-The database includes:
-
-- **Passengers** (basic identity data)
-- **Passenger Details** (1:1 extension with demographics, address, contact)
-- **Bookings** (connects passengers and flights, includes seat and price)
-- **Flights** (flight number, departure/arrival timestamps, airline, aircraft, airports)
-- **Airlines** (IATA code, company name, home airport)
-- **Aircraft** (capacity, belongs to one airline and one aircraft type)
-- **Aircraft Types** (name and description)
-- **Airports** (name, city, country, coordinates)
+The repository covers the full workflow from **conceptual modeling (ERD)** to **schema creation**, **sample data insertion**, and **business-oriented SQL analysis**.
 
 ---
 
-## Key Design Choices
+## Project Scope
 
-- Passenger details are stored in a separate table to keep the core `passenger` table clean (**1:1 relationship**).
-- Bookings implement a many-to-many relationship between passengers and flights via foreign keys.
-- Flights reference both departure and arrival airports.
-- Aircraft belong to exactly one airline and one aircraft type.
+The database models a simplified airline booking system including:
+
+- Passengers and passenger details  
+- Bookings and ticket prices  
+- Flights, airlines, aircraft, and aircraft types  
+- Airports with geographic information  
+
+The project uses **sample data** for demonstration purposes.  
+Analytical results do not represent real-world airline operations.
 
 ---
 
-## Tech
+## Database Schema (ERD)
 
-- SQL (PostgreSQL-friendly)
-- Relational modeling with PK/FK constraints
+The entity-relationship diagram illustrates all tables, primary keys, foreign keys, and relationships used in the database.
+
+![ERD](erd/erd.png)
+
+---
+
+## Repository Structure
+
+```text
+airline-database-sql/
+│
+├── README.md
+│
+├── erd/
+│   └── erd.png
+│
+├── schema/
+│   ├── create_tables.sql
+│   ├── insert_airport.sql
+│   ├── insert_aircraft_type.sql
+│   ├── insert_passenger.sql
+│   ├── insert_passenger_details.sql
+│   ├── insert_airline.sql
+│   ├── insert_aircraft.sql
+│   ├── insert_flight.sql
+│   └── insert_booking.sql
+│
+├── queries/
+│   └── advanced_queries.sql
