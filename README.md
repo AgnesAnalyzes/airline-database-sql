@@ -37,18 +37,17 @@ airline-database-sql/
 ├── README.md
 │
 ├── erd/
-│   └── erd.png
+│   └── airport-erd.png
 │
 ├── schema/
-│   ├── create_tables.sql
-│   ├── insert_airport.sql
-│   ├── insert_aircraft_type.sql
-│   ├── insert_passenger.sql
-│   ├── insert_passenger_details.sql
-│   ├── insert_airline.sql
-│   ├── insert_aircraft.sql
-│   ├── insert_flight.sql
-│   └── insert_booking.sql
+│   ├── 1_insert_sample_data_flughafen.sql
+│   ├── 2_insert_sample_data_flugzeug_typ.sql
+│   ├── 3_insert_sample_data_fluglinie.sql
+│   ├── 4_insert_sample_data_flugzeug.sql
+│   ├── 5_insert_sample_data_passagier.sql
+│   ├── 6_insert_sample_data_passagierdetails.sql
+│   ├── 7_insert_sample_data_flug.sql
+│   └── 8_insert_sample_data_buchungen.sql
 │
 ├── queries/
 │   └── advanced_queries.sql
