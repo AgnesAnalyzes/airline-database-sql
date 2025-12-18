@@ -25,7 +25,7 @@ Analytical results do not represent real-world airline operations.
 
 The entity-relationship diagram illustrates all tables, primary keys, foreign keys, and relationships used in the database.
 
-![ERD](erd/erd.png)
+![ERD](erd/airport-erd.png)
 
 ---
 
